@@ -22,13 +22,15 @@ club = st.sidebar.selectbox("Clube", clubes)
 # Filtra jogadores do clube
 df_club = df_data[df_data["Club"] == club].set_index("Name")
 
-# --- ESCUDO DO CLUBE (local) ---
-# Os arquivos foram salvos em images/clubs/{nome_do_clube}.png
+# --- ESCUDO DO CLUBE ---
+# Caminho local do escudo (images/clubs/{nome_do_clube}.png)
 safe_name = "".join(c if c.isalnum() or c in " _-" else "_" for c in club)
 club_logo_path = os.path.join("images", "clubs", f"{safe_name}.png")
+
+# Mostra também a URL original do dataset (CDN Sofifa)
 st.write(df_club.iloc[0]["Club Logo"])  # exibe a URL do CDN
 
-
+# Exibe o escudo local se existir
 if os.path.exists(club_logo_path):
     st.image(club_logo_path, width=120)
 else:
