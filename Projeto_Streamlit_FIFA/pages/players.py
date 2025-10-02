@@ -24,7 +24,9 @@ st.markdown(f"**Clube:** {player_stats['Club']}")
 st.markdown(f"**Posição:** {player_stats['Position']}")
 
 #teste de código
-st.write(player_stats["Photo"])
+st.write(player_stats["Photo"]) #verifica se a foto possui um link válido
+
+
 
 
 
