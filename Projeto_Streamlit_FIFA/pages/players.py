@@ -26,10 +26,6 @@ player_id = str(player_stats["ID"])
 photo_path = os.path.join("images", "players", f"{player_id}.png")
 st.write(player_stats["Photo"])# mostra o caminho da foto
 
-
-
-
-
 if os.path.exists(photo_path):
     st.image(photo_path, width=150, caption=player_stats["Name"])
 else:
