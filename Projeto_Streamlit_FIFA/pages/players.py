@@ -22,8 +22,10 @@ st.title(player_stats["Name"])
 
 st.markdown(f"**Clube:** {player_stats['Club']}")
 st.markdown(f"**Posição:** {player_stats['Position']}")
-st.write(repr(player_stats["Photo"]))
-st.write(type(player_stats["Photo"]))
+
+#teste de código
+st.write(player_stats["Photo"])
+
 
 
 col1, col2, col3, col4 = st.columns(4)
